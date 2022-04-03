@@ -7,7 +7,7 @@ public class driver {
 
     
     public static void main(String[] args) {
-        final int CHAMP_SIZE = 2;
+        final int CHAMP_SIZE = 159;
         champList list = new champList();
 
         int corrIndex = (int) (Math.random() * CHAMP_SIZE);
@@ -85,9 +85,9 @@ public class driver {
 
             System.out.print(guessChamp.getCost());
             if (guessChamp.getCost() == corrChamp.getCost()) {
-                System.out.println(" -> Correct, ");
+                System.out.println(" -> Correct");
             } else {
-                System.out.println(" -> Incorrect, ");
+                System.out.println(" -> Incorrect");
             }
 
             counter++;

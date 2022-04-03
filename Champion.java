@@ -26,6 +26,7 @@ public class Champion {
         return region;
     }
 
+
     public String getRole() {
         return role;
     }
