@@ -38,4 +38,9 @@ public class Champion {
         return cost;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        Champion champ = (Champion) o;
+        return (getName().equals(champ.getName()));
+    }
 }
