@@ -4,7 +4,7 @@ public class champList {
     
     private HashMap<String, Champion> list;    
 
-    public champList(int size) {
+    public champList() {
         this.list = new HashMap<String, Champion>();
     }
 
@@ -14,5 +14,10 @@ public class champList {
 
     public void addChamp(String name, Champion champ) {
         list.add(name, champ);
+    }
+
+    public void addChamp(String name, String region, String role, String lane, int cost) {
+        Champion newChamp = new Champion(name, region, role, lane, cost);
+        list.add(name, newChamp);
     }
 }
