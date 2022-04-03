@@ -43,4 +43,9 @@ public class Champion {
         Champion champ = (Champion) o;
         return (getName().equals(champ.getName()));
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }
