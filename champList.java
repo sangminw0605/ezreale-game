@@ -13,11 +13,11 @@ public class champList {
     }
 
     public void addChamp(String name, Champion champ) {
-        list.add(name, champ);
+        list.put(name, champ);
     }
 
     public void addChamp(String name, String region, String role, String lane, int cost) {
         Champion newChamp = new Champion(name, region, role, lane, cost);
-        list.add(name, newChamp);
+        addChamp(name, newChamp);
     }
 }
