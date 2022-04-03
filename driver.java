@@ -44,10 +44,10 @@ public class driver {
         int counter = 1;
         Scanner readIn = new Scanner(System.in);
 
-        while (counter != 8) {
+        while (counter != 10) {
 
-            System.out.print("(" + counter + "/8) Guess a champion: ");
-            String guess = readIn.nextLine();
+            System.out.print("(" + counter + "/10) Guess a champion: ");
+            String guess = readIn.nextLine().toLowerCase();
 
             Champion guessChamp = list.getChamp(guess);
 
@@ -62,32 +62,32 @@ public class driver {
                 return;
             }
 
-            System.out.print(guessChamp.getRegion());
+            System.out.print("\nRegion: " + guessChamp.getRegion());
             if (guessChamp.getRegion().equals(corrChamp.getRegion())) {
-                System.out.print(" -> Correct, ");
+                System.out.println(" -> Correct, ");
             } else {
-                System.out.print(" -> Incorrect, ");
+                System.out.println(" -> Incorrect, ");
             }
 
-            System.out.print(guessChamp.getRole());
+            System.out.print("Role: " + guessChamp.getRole());
             if (guessChamp.getRole().equals(corrChamp.getRole())) {
-                System.out.print(" -> Correct, ");
+                System.out.println(" -> Correct, ");
             } else {
-                System.out.print(" -> Incorrect, ");
+                System.out.println(" -> Incorrect, ");
             }
 
-            System.out.print(guessChamp.getLane());
+            System.out.print("Lane: " + guessChamp.getLane());
             if (guessChamp.getLane().equals(corrChamp.getLane())) {
-                System.out.print(" -> Correct, ");
+                System.out.println(" -> Correct, ");
             } else {
-                System.out.print(" -> Incorrect, ");
+                System.out.println(" -> Incorrect, ");
             }
 
-            System.out.print(guessChamp.getCost());
+            System.out.print("Cost: " + guessChamp.getCost());
             if (guessChamp.getCost() == corrChamp.getCost()) {
-                System.out.println(" -> Correct");
+                System.out.println(" -> Correct\n");
             } else {
-                System.out.println(" -> Incorrect");
+                System.out.println(" -> Incorrect\n");
             }
 
             counter++;
